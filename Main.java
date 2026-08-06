@@ -1,12 +1,21 @@
-public class Main {
-   public Main() {
-   }
+import java.util.ArrayList;
 
-   public static void main(String[] var0) {
-      BankAccount var1 = new BankAccount(1001, "Raagavi", (double)5000.0F);
-      System.out.println("Bank Account Created");
-      System.out.println("Account Number: " + var1.getAccountNumber());
-      System.out.println("Account Holder: " + var1.getAccountHolder());
-      System.out.println("Balance: â‚¹" + var1.getBalance());
-   }
+public class Main {
+    public static void main(String[] args) {
+
+        ArrayList<BankAccount> accounts = new ArrayList<>();
+
+        accounts.add(new BankAccount(1001, "Raagavi", 5000));
+        accounts.add(new BankAccount(1002, "Priya", 7000));
+        accounts.add(new BankAccount(1003, "Rahul", 3000));
+
+        System.out.println("Bank Accounts");
+
+        for (BankAccount account : accounts) {
+            System.out.println("Account Number: " + account.getAccountNumber());
+            System.out.println("Account Holder: " + account.getAccountHolder());
+            System.out.println("Balance: ₹" + account.getBalance());
+            System.out.println();
+        }
+    }
 }
